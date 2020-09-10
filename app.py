@@ -2,7 +2,10 @@ from flask import Flask, request, jsonify
 from dbSetup import items
 from bson.objectid import ObjectId
 from pymongo import ReturnDocument
+from flask_cors import CORS
+
 app = Flask(__name__)
+CORS(app)
 
 @app.route('/items')
 def get_all_items():
