@@ -5,25 +5,25 @@ sample_data = [
       "description": "Alaskan Birch Wood Bowl",
       "price": 75,
       "type": "Bowl",
-      "img": 'AKBowl'
+      "img": 'AKBowl.jpg'
     },
     {
       "description": "End grain cutting board",
       "price": 135,
       "type": 'board',
-      "img" : 'EndGrainBoard'
+      "img" : 'EndGrainBoard.jpg'
     },
     {
       "description": "Alaskan Birch Wood Bowl",
       "price": 75,
       "type": "Bowl",
-      "img": 'AKBowl'
+      "img": 'AKBowl.jpg'
     },
     {
       "description": "End grain cutting board",
       "price": 135,
       "type": 'board',
-      "img" : 'EndGrainBoard'
+      "img" : 'EndGrainBoard.jpg'
     }
 ]
 

@@ -3,11 +3,11 @@ from dbSetup import items
 from bson.objectid import ObjectId
 from pymongo import ReturnDocument
 from flask_cors import CORS
-from models import Item, UPLOAD_FOLDER
+from models import Item
 
 app = Flask(__name__)
 
-app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
+
 CORS(app)
 
 @app.route('/items')
@@ -26,10 +26,11 @@ def create_item():
     """Route to create an item"""
   
     data = request.get_json()
-    import pdb; pdb.set_trace()
+    name = data.get('img')
+    idx = name.rindex(".")
+    name = name[:idx]
 
-    Item.save_img(data.get('imgFile'))
-    data.img = imgFile.name
+    Item.save_img(data.get('imgFile'), name)
     data.pop('imgFile')
    
     result = items.insert_one(data)
